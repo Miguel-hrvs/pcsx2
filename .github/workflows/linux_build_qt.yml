@@ -138,8 +138,8 @@ jobs:
             -DCMAKE_PREFIX_PATH="$HOME/deps" \
             -DCMAKE_C_COMPILER=clang-17 \
             -DCMAKE_CXX_COMPILER=clang++-17 \
-            -DCMAKE_EXE_LINKER_FLAGS_INIT="-fuse-ld=lld" \
-            -DCMAKE_MODULE_LINKER_FLAGS_INIT="-fuse-ld=lld" \
+            -DCMAKE_EXE_LINKER_FLAGS_INIT="-fuse-ld=lld -ffat-lto-objects" \
+            -DCMAKE_MODULE_LINKER_FLAGS_INIT="-fuse-ld=lld -ffat-lto-objects" \
             -DCMAKE_CXX_COMPILER_LAUNCHER=ccache \
             -DENABLE_SETCAP=OFF \
             -DDISABLE_ADVANCE_SIMD=TRUE \
